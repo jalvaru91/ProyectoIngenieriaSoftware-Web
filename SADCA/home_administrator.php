@@ -10,7 +10,7 @@
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>FREE RESPONSIVE HORIZONTAL ADMIN</title>
+    <title>SADCA ADMIN HOME</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -55,17 +55,18 @@
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
                             <li><a href="index.html" class="menu-top-active">Inicio</a></li>
                              
-                            <li><a href="form.html">FORMS</a></li>
-                            <li>
-                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">UI ELEMENTS <i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="ui.html">UI ELEMENTS</a></li>
-                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">EXAMPLE LINK</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="tab.html">TABS & PANELS</a></li>
-                            <li><a href="table.html">TABLES</a></li>
-                            <li><a href="blank.html" >BLANK PAGE</a></li>
+                            <li><a href="form.html">Profesores</a></li>
+                            <li><a href="tab.html">Franjas Horarias</a></li>
+                            <li><a href="table.html">Planes de Estudio</a></li>
+                            <li><a href="blank.html" >Cursos</a></li>
+							<li><a href="blank.html" >Sedes</a></li>
+							<li><a href="blank.html" >Labores Administrativas</a></li>
+							<li><a href="blank.html" >Labores de Investigación</a></li>
+							<li><a href="blank.html" >Labores Especiales</a></li>
+							<li><a href="blank.html" >Asesoría de Estudiantes</a></li>
+							<li><a href="blank.html" >Jornadas Laborales</a></li>
+							<li><a href="blank.html" >Oferta Académica</a></li>
+							
 
                         </ul>
                     </div>
@@ -79,7 +80,7 @@
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">Sistema Administrador de Carga Académica</h4>
+                <h4 class="header-line">Sistema Administrador de Datos de Carga Académica</h4>
                 
                             </div>
 
