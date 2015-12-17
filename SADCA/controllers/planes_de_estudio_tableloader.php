@@ -1,4 +1,17 @@
 <?php
+ $urlWebservice = 'http://192.168.1.30:3000/getPlanesEstudio';
+//Funcion get para cargar la tabla 
+ function httpGet($pUrlWebservice)
+{
+    $ch = curl_init();  
+    curl_setopt($ch,CURLOPT_URL,$pUrlWebservice);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true); 
+    $output=curl_exec($ch);
+ 
+    curl_close($ch);
+    return $output;
+}
+
 
 function showTablePlanesEstudio($pJson){
 	$jsonPHP = json_decode($pJson);
@@ -37,11 +50,11 @@ function showTablePlanesEstudio($pJson){
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
+                                <table id="tabla" class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Código</th>
-                                            <th>Nombre</th>
+                                            <TH>Código</TH>
+                                            <TH>Nombre</TH>
                                             
                                         </tr>
                                     </thead>';
@@ -49,17 +62,15 @@ function showTablePlanesEstudio($pJson){
          echo '                        <tbody>';
 
           for($index = 0;  $index < $jsonArraySize; $index++){
-			  echo '<tr>';
-			  echo '<sec>';
-			  echo 'secreto';
-			  echo '<sec>';
-			  echo '<td>';
+			  echo '<tr style="cursor: pointer" onclick="muestraModal(this)">';
+			 
+			  echo '<TD>';
 			  echo $jsonArray[$index]->Codigo;
-			  echo '</td>';
+			  echo '</TD>';
 			  
-			  echo '<td>';
+			  echo '<TD>';
 			  echo $jsonArray[$index]->Nombre;
-			  echo '</td>';
+			  echo '</TD>';
 			  
 			  echo '</tr>';
 		  }			
@@ -83,9 +94,7 @@ function showTablePlanesEstudio($pJson){
 	
 }
 
-$jsonprueba1 = '{ "Error": false, "PlanesEstudio":[{"Codigo":"410","Nombre":"Bachillerato en Ingeniería en Computación"}, {"Codigo":"MC","Nombre":"Maestría en ciencias de la Computación"}]}';
-$jsonprueba2 = '{"Error": true, "Message":"soy un mensaje de error"}';
-
-showTablePlanesEstudio($jsonprueba1);
+ $jsonRespuesta = httpGet($urlWebservice);
+ showTablePlanesEstudio($jsonRespuesta);
 
 ?>
