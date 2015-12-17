@@ -1,9 +1,6 @@
 <?php
   
- 
-  class LoginController {
-	  
-    public function isValidUserPassword($pUsername, $pPassword){
+       function isValidUserPassword($pUsername, $pPassword){
 		$result = FALSE;
 		if((strcmp($pUsername,"Jose") == 0) && (strcmp($pPassword,"pass")==0)){
 		$result = TRUE;
@@ -17,14 +14,17 @@
 			header("Location:/proyectoingenieriasoftware-web/SADCA/login.php");
 		}
 	}
-	
-	public function getUserRole($pUsername,$pPassword){
-		$result = "admin";	
-		return $result;
-		
-	}
-	
+  
+    if (isset($_GET['controller']) and isset($_GET['action']) and isset($_GET['username']) and isset($_GET['password'])) {
+    $controllername = $_GET['controller'];
+    $action     = $_GET['action'];
+	$username = $_GET['username'];
+	$password = $_GET['password'];
+	isValidUserPassword($username,$password);
+  } else {
+	header("Location:/proyectoingenieriasoftware-web/SADCA/login.php");
   }
   
+
 		
 ?>
