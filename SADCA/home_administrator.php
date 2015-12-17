@@ -56,7 +56,7 @@
                             <li><a href="home_administrator.php" class="menu-top-active">Inicio</a></li>
                             <li><a href="form.html">Profesores</a></li>
                             <li><a href="tab.html">Franjas Horarias</a></li>
-                            <li><a href="table.html">Planes de Estudio</a></li>
+                            <li><a href="planes_de_estudio_administrator.php">Planes de Estudio</a></li>
                             <li><a href="blank.html" >Cursos</a></li>
 							<li><a href="blank.html" >Sedes</a></li>
 							<li><a href="blank.html" >Labores Administrativas</a></li>

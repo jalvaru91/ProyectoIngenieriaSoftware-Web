@@ -58,12 +58,12 @@
                            <li><a href="home_administrator.php">Inicio</a></li>
                             <li><a href="form.html">Profesores</a></li>
                             <li><a href="tab.html">Franjas Horarias</a></li>
-                            <li><a href="planes_de_estudio_administrator.php">Planes de Estudio</a></li>
+                            <li><a href="planes_de_estudio_administrator.php" class="menu-top-active">Planes de Estudio</a></li>
                             <li><a href="blank.html" >Cursos</a></li>
 							<li><a href="blank.html" >Sedes</a></li>
 							<li><a href="blank.html" >Labores Administrativas</a></li>
 							<li><a href="blank.html" >Labores de Investigación</a></li>
-							<li><a href="labores_especiales_administrator.php" class="menu-top-active">Labores Especiales</a></li>
+							<li><a href="labores_especiales_administrator.php">Labores Especiales</a></li>
 							<li><a href="blank.html" >Trabajos Finales de Graduación</a></li>
 							<li><a href="blank.html" >Jornadas Laborales</a></li>
 							<li><a href="blank.html" >Oferta Académica</a></li>
@@ -80,7 +80,7 @@
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">Labores Especiales</h4>
+                <h4 class="header-line">Planes de Estudio</h4>
                 
                             </div>
 
@@ -89,11 +89,21 @@
                 <div class="col-md-12">
                           
                                  
-           
+                <!--Table from the webservice is loaded-->
+                <?php include ("controllers/planes_de_estudio_tableloader.php")?> 
             
                 </div>
+				
+				
 			</div>
+			
+			
+			
         </div>
+		
+		
+		
+		
     </div>
      <!-- CONTENT-WRAPPER SECTION END-->
     <section class="footer-section">

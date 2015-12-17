@@ -33,7 +33,7 @@ function showTablePlanesEstudio($pJson){
 		echo '
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Kitchen Sink
+                            
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -47,30 +47,12 @@ function showTablePlanesEstudio($pJson){
                                     </thead>';
 									
          echo '                        <tbody>';
-		 /*
-         echo'                               <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
 
-                                            
-                                        </tr>';
-										
-			*/
           for($index = 0;  $index < $jsonArraySize; $index++){
 			  echo '<tr>';
-			  
+			  echo '<sec>';
+			  echo 'secreto';
+			  echo '<sec>';
 			  echo '<td>';
 			  echo $jsonArray[$index]->Codigo;
 			  echo '</td>';
