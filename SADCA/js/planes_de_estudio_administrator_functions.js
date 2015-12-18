@@ -9,6 +9,7 @@ function captureRegisterData(objeto){
 	mostrarModal();
 }
 
+
 function mostrarModal(){
 	$('#myModal').modal('show');
 	document.getElementById('codigo').defaultValue = sessionStorage.getItem("codigoOriginal");
@@ -30,12 +31,32 @@ function enviarDatos(){
 				    nombre:nuevoNombre,
 		            email_usuario:sessionStorage.getItem("username")}; 
         var jsonString = JSON.stringify(body);					
-	    var urlrequest = "controllers/planes_de_estudio_administrator_controller.php/?"+"request=PUT"+"&"+"action=putPlanDeEstudios"+"&"+"planDeEstudio="+jsonString;
+	    var urlrequest = "controllers/planes_de_estudio_administrator_controller.php/?"+"request=PUT"+"&"+"action=putPlanDeEstudio"+"&"+"planDeEstudio="+jsonString;
 		sessionStorage.removeItem("codigoOriginal");
 		sessionStorage.removeItem("codigo");
 		sessionStorage.removeItem("nombre");
 		window.location = urlrequest;        
 	}
+	else{
+		
+	}
+	
+}
+
+function enviarNuevosDatos(){
+	var v_codigo = document.getElementById('myModal2_codigo').value;
+	var v_nombre = document.getElementById('myModal2_nombre').value;
+	
+	if((v_codigo != "") && (v_nombre != "")){
+	 var body = {
+		  codigo:v_codigo,
+		  nombre:v_nombre,
+	      email_usuario:sessionStorage.getItem("username")
+	 };
+     var jsonString = JSON.stringify(body); 	 
+	 var urlrequest = "controllers/planes_de_estudio_administrator_controller.php/?"+"request=POST"+"&"+"action=postPlanDeEstudio"+"&"+"planDeEstudio="+jsonString;
+     window.location = urlrequest;
+	 }
 	else{
 		
 	}

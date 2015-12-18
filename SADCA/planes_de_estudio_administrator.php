@@ -165,7 +165,7 @@
 <!-- Fin Modal modificar plan de estudio-->
 
 
-<!-- Modal para modificar un plan de estudio-->
+<!-- Modal para nuevo un plan de estudio-->
 <div id="myModal2" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -205,7 +205,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-		<button type="button" class="btn btn-default" >Nuevo</button>
+		<button type="button" class="btn btn-default" onclick="enviarNuevosDatos()">Nuevo</button>
       </div>
 	  
 	  
@@ -214,7 +214,7 @@
   </div>
 </div>
 </div>
-<!-- Fin Modal modificar plan de estudio-->
+<!-- Fin Modal nuevo plan de estudio-->
 
 					 
     <section class="footer-section">
