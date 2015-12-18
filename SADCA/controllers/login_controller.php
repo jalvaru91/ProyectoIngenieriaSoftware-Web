@@ -2,7 +2,7 @@
   
        function isValidUserPassword($pUsername, $pPassword){
 		$result = FALSE;
-		if((strcmp($pUsername,"Jose") == 0) && (strcmp($pPassword,"pass")==0)){
+		if((strcmp($pUsername,"test@tec.ac.cr") == 0) && (strcmp($pPassword,"pass")==0)){
 		$result = TRUE;
 		session_start();
 		$_SESSION["username"] = $pUsername;

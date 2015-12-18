@@ -62,7 +62,7 @@ function showTablePlanesEstudio($pJson){
          echo '                        <tbody>';
 
           for($index = 0;  $index < $jsonArraySize; $index++){
-			  echo '<tr style="cursor: pointer" onclick="muestraModal(this)">';
+			  echo '<tr style="cursor: pointer" onclick="captureRegisterData(this)">';
 			 
 			  echo '<TD>';
 			  echo $jsonArray[$index]->Codigo;

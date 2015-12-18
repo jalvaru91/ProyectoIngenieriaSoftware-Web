@@ -28,7 +28,7 @@
 <script src="js/logout.js" type="text/javascript">
 </script>
 <!-- JS que maneja los eventos de tabla-->
-<script src="js/planes_de_estudio_tablehandler.js" type="text/javascript">
+<script src="js/planes_de_estudio_administrator_functions.js" type="text/javascript">
 </script>  
 
 
@@ -94,8 +94,10 @@
                           
                                  
                 <!--Table from the webservice -->
-                <?php include ("controllers/planes_de_estudio_tableloader.php")?> 
-            
+                <?php include ("controllers/planes_de_estudio_administrator_tableloader.php")?> 
+                 <center>  
+                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick="mostrarModalNuevoPlan()">Nuevo</button>
+                 </center>
                 </div>
 				
 				
@@ -111,36 +113,108 @@
     </div>
      <!-- CONTENT-WRAPPER SECTION END-->
 	 
-	 
-	                 <!--  Modals-->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Modals Example
-                        </div>
+<!-- Modal para modificar un plan de estudio-->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modificar Plan de Estudio</h4>
+      </div>
+      <div class="modal-body">
+        <!-- -->
+		<div class="row">
+           
+               <div class="panel panel-info">
+
                         <div class="panel-body">
-                            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                              Click  Launch Demo Modal
-                            </button>
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title" id="myModalLabel">Modal title Here</h4>
+                            <form name="formularioPlanesDeEstudio" role="form">
+                                        <div class="form-group">
+                                            <label>Código</label>
+                                            <input id="codigo" class="form-control" type="text" />
+                                            <p class="help-block">Introducir código de plan de estudio.</p>
                                         </div>
-                                        <div class="modal-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                 <div class="form-group">
+                                            <label>Nombre</label>
+                                            <input id="nombre" class="form-control" type="text" />
+                                     <p class="help-block">Introducir nombre de plan de estudio. </p>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                            
+                                  
+                                         
+
+                                    </form>
                             </div>
-                        </div>
-                    </div>
-                     <!-- End Modals-->
+                        </div>                            
+		<!-- -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+		<button type="button" class="btn btn-default" onclick="enviarDatos()">Guardar</button>
+      </div>
+	  
+	  
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- Fin Modal modificar plan de estudio-->
+
+
+<!-- Modal para modificar un plan de estudio-->
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Nuevo Plan de Estudio</h4>
+      </div>
+      <div class="modal-body">
+        <!-- -->
+		<div class="row">
+           
+               <div class="panel panel-info">
+
+                        <div class="panel-body">
+                            <form name="formularioPlanesDeEstudio" role="form">
+                                        <div class="form-group">
+                                            <label>Código</label>
+                                            <input id="myModal2_codigo" class="form-control" type="text" />
+                                            <p class="help-block">Introducir código de plan de estudio.</p>
+                                        </div>
+                                 <div class="form-group">
+                                            <label>Nombre</label>
+                                            <input id="myModal2_nombre" class="form-control" type="text" />
+                                     <p class="help-block">Introducir nombre de plan de estudio. </p>
+                                        </div>
+                                            
+                                  
+                                         
+
+                                    </form>
+                            </div>
+                        </div>                            
+		<!-- -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+		<button type="button" class="btn btn-default" >Nuevo</button>
+      </div>
+	  
+	  
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- Fin Modal modificar plan de estudio-->
 
 					 
     <section class="footer-section">
