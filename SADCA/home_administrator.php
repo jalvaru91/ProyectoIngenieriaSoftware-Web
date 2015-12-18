@@ -58,7 +58,7 @@
                             <li><a href="tab.html">Franjas Horarias</a></li>
                             <li><a href="planes_de_estudio_administrator.php">Planes de Estudio</a></li>
                             <li><a href="blank.html" >Cursos</a></li>
-							<li><a href="blank.html" >Sedes</a></li>
+							<li><a href="sedes_administrator.php" >Sedes</a></li>
 							<li><a href="blank.html" >Labores Administrativas</a></li>
 							<li><a href="blank.html" >Labores de Investigación</a></li>
 							<li><a href="labores_especiales_administrator.php" >Labores Especiales</a></li>
